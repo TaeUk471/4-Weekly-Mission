@@ -11,7 +11,6 @@ const ApiTest = () => {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
   }, []);
   return <div></div>;

@@ -1,13 +1,13 @@
 import { Inter } from 'next/font/google';
 
-import ApiTest from './ApiTest';
+import SharedPage from './sharedPage';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
     <>
-      <ApiTest />
+      <SharedPage />
     </>
   );
 }

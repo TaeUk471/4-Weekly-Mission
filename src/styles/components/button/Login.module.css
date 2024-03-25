@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  width: 12.8rem;
+  padding: 1.6rem 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.buttonText {
+  color: var(--grayLight);
+  font-size: 1.8rem;
+  font-weight: 600;
+}

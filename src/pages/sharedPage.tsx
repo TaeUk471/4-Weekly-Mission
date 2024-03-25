@@ -1,27 +1,38 @@
 import { useEffect, useState } from 'react';
 import { sharedData } from '../Utils/Api/axiosSet';
 import Navigation from '../components/Navigation';
-import { sharedUser } from '../interface/dataForm';
-import { SHARED__USER } from '../Utils/Constants/InitialValue';
+import Header from '../components/Header';
+import { sharedCard, sharedUser } from '../interface/dataForm';
+import { SHARED__CARD, SHARED__USER } from '../Utils/Constants/InitialValue';
+
+interface Props {
+  getState: () => Promise<any>;
+  setState: (result: any) => void;
+}
 
 const SharedPage = () => {
   const [user, setUser] = useState<sharedUser>(SHARED__USER);
+  const [folder, setFolder] = useState<sharedCard>(SHARED__CARD);
+
+  const fetchData = async ({ getState, setState }: Props) => {
+    try {
+      const result = await getState();
+      setState(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await sharedData.profile();
-        setUser(result); // 확인용 로그
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
+    fetchData({ getState: sharedData.profile, setState: setUser });
+    fetchData({ getState: sharedData.card, setState: setFolder });
   }, []);
 
   return (
-    <div>
+    <>
       <Navigation user={user} />
-    </div>
+      <Header folder={folder} />
+    </>
   );
 };
 

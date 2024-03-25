@@ -6,11 +6,30 @@ export interface sharedUser {
 }
 
 export interface sharedCard {
+  folder: Folder;
+}
+
+export interface Folder {
+  id: number;
+  name: string;
+  owner: Owner;
+  links: Link[];
+  count: number;
+}
+
+export interface Owner {
+  id: number;
+  name: string;
+  profileImageSource: string;
+}
+
+export interface Link {
   id: number;
   createdAt: string;
   url: string;
   title: string;
-  imageSource: string;
+  description: string;
+  imageSource?: string;
 }
 
 export interface folderCategory {
@@ -36,6 +55,7 @@ export interface folderCard {
 }
 
 export interface folderUser {
+  data: any;
   id: number;
   created_at: string;
   name: string;

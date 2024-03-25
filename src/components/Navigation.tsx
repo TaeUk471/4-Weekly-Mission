@@ -7,14 +7,14 @@ import Login from './Button/Login';
 const Navigation = ({ user }: { user: sharedUser }) => {
   return (
     <>
-      <div className={styles.container}>
+      <nav className={styles.container}>
         <div>
           <img className={styles.logo} src={logo.src as string} alt='Linkbrary Logo' />
         </div>
         {/* <p>shared</p>
         <p>folder</p> */}
         {user.email && user.profileImageSource ? <Profile user={user} /> : <Login />}
-      </div>
+      </nav>
     </>
   );
 };

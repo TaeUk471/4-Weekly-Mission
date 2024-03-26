@@ -1,7 +1,7 @@
 import { sharedCard } from '../interface/dataForm';
 import styles from '../styles/components/MainProfile.module.css';
 
-const MainProfile = ({ folder }: { folder: sharedCard }) => {
+const mainProfile = ({ folder }: { folder: sharedCard }) => {
   return (
     <div className={styles.container}>
       <div className={styles.userBox}>
@@ -15,4 +15,4 @@ const MainProfile = ({ folder }: { folder: sharedCard }) => {
   );
 };
 
-export default MainProfile;
+export default mainProfile;

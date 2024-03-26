@@ -1,5 +1,5 @@
 // BaseUrl
-export const BASE_URL = 'https://bootcamp-api.codeit.kr/api';
+export const BASE_URL = 'https://bootcamp-api.codeit.kr/api/';
 
 // EndPoint
 export const SHARED_USER = '/sample/user';

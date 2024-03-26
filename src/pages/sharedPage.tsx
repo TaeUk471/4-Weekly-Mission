@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { sharedData } from '../Utils/Api/axiosSet';
-import Navigation from '../components/Navigation';
-import Header from '../components/Header';
+import Navigation from '../components/navigation';
+import Header from '../components/header';
 import { sharedCard, sharedUser } from '../interface/dataForm';
 import { SHARED__CARD, SHARED__USER } from '../Utils/Constants/InitialValue';
+import Footer from '../components/footer';
 
 interface Props {
   getState: () => Promise<any>;
@@ -32,6 +33,7 @@ const SharedPage = () => {
     <>
       <Navigation user={user} />
       <Header folder={folder} />
+      <Footer />
     </>
   );
 };

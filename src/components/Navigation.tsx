@@ -1,8 +1,8 @@
 import styles from '../styles/components/navigation.module.css';
 import logo from '../assets/logo/logo.png';
 import { sharedUser } from '../interface/dataForm';
-import Profile from './Profile';
-import Login from './Button/Login';
+import Profile from './profile';
+import Login from './Button/login';
 
 const Navigation = ({ user }: { user: sharedUser }) => {
   return (

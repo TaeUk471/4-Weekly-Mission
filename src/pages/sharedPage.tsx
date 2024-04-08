@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+
 import { sharedData } from '../Utils/Api/axiosSet';
-import Navigation from '../components/navigation';
-import Header from '../components/header';
-import { sharedCard, sharedUser } from '../interface/dataForm';
 import { SHARED__CARD, SHARED__USER } from '../Utils/Constants/InitialValue';
 import Footer from '../components/footer';
+import Header from '../components/header';
+import Navigation from '../components/navigation';
+import { sharedCard, sharedUser } from '../interface/dataForm';
 
 interface Props {
   getState: () => Promise<any>;
